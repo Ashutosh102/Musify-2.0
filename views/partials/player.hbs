@@ -1,0 +1,83 @@
+{{!-- style for player --}}
+<style>
+    #audio0 {
+        width: 40%;
+        position: absolute;
+        left: 30%;
+        top: 10px;
+    }
+
+    .fixed-bottom {
+        background-color: black;
+        display: block;
+        height: 70px;
+    }
+
+    
+
+    .btn-inline {
+        background-color: black;
+        color: #0575E6;
+        position: absolute;
+        top: 10px;
+        display: inline-block;
+        margin: 5px;
+        font-size: 20px;
+    }
+
+    .btn-inline:hover {
+        color: #00F260;
+
+    }
+
+    #next {
+        position: absolute;
+        left: 72%;
+    }
+
+    #prev {
+        position: absolute;
+        left: 25%;
+    }
+
+    #loop {
+        position: absolute;
+        left: 20%;
+    }
+
+    #random {
+        position: absolute;
+        left: 77%;
+    }
+
+    #plus {
+        position: absolute;
+        left: 85%;
+    }
+</style>
+
+{{!-- player hbs --}}
+<div class="fixed-bottom " id="player">
+    <div class="container">
+        <audio id="audio0" data1="" data2="" src="" controls volume loop preload="auto"></audio>
+        {{!-- //<audio id="audio0" src="" controls volume loop preload="auto"></audio> --}}
+        <button type="button" class="btn-circle btn-inline" id="prev"><i class="fas fa-backward "></i></button>
+        <button type="button" class="btn-circle btn-inline" id="next"><i class="fas fa-forward "></i></button>
+        
+        {{!-- <button type="button" class="btn-circle btn-inline" id="random"><i class="fas fa-random"></i></button> --}}
+       
+    </div>
+</div>
+ <script>
+     //player loop
+        var x = document.getElementById("audio0");
+
+        function enableLoop() {
+            x.loop = true;
+        }
+
+        function disableLoop() {
+            x.loop = false;
+        } 
+ </script>
+
